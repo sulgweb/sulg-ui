@@ -33,6 +33,7 @@
     }
 </script>
  
+
 <style lang="less" scoped>
 //@import url('../../style/index.less');
 @typeList:primary,error,warning,success,default,info;

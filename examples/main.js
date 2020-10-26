@@ -2,8 +2,23 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/router'
 
-import 'github-markdown-css/github-markdown.css'
 
+import 'github-markdown-css/github-markdown.css'
+//import './assets/md.less'
+
+// 代码高亮的js
+import hljs from 'highlight.js'
+import 'highlight.js/styles/docco.css' //样式文件
+// 定义一个全局指令
+Vue.directive('highlight',function (el) {
+  let blocks = el.querySelectorAll('pre code');
+  blocks.forEach((block)=>{
+    hljs.highlightBlock(block)
+  })
+})
+
+import demoBlock from './components/demo-block.vue'
+Vue.component('demo-block', demoBlock)
 import SulgUI from '~/index'
 Vue.use(SulgUI)
 

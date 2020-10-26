@@ -27,4 +27,11 @@ export default {
   color: #2c3e50;
   /* margin-top: 60px; */
 }
+.demo-block{
+  padding: 32px;
+  border: 1px solid #e2ecf4;
+  border-radius: 4px 4px 0 0;
+  background-color: #fff;
+  margin-top: 16px;
+}
 </style>

@@ -47,7 +47,10 @@
   min-width: 60px;
   min-height: 30px;
   text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
   //width: 100%;
+  z-index: 1;
   cursor: pointer;
 }
 .su-button(@typeName,@typeColor,@typeColorBg) {
@@ -69,7 +72,7 @@
       &-round-fade-all{
         position: relative;
         transition: 0.5s;
-        &::after{
+        &::before{
           transition: 0.8s;
           width: 0;
           height: 0;
@@ -84,7 +87,7 @@
         }
         &:hover{
           color: #fff;
-          &::after{
+          &::before{
             width: 300px;
             height: 300px;
           }
@@ -93,7 +96,7 @@
       &-round-fade-half{
         position: relative;
         transition: 0.5s;
-        &::after{
+        &::before{
           transition: 0.8s;
           width: 0;
           height: 0;
@@ -108,7 +111,7 @@
         }
         &:hover{
           color: #fff;
-          &::after{
+          &::before{
             width: 300px;
             height: 300px;
           }

@@ -5,9 +5,20 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 export default new VueRouter({
   mode: "history",
-  routes: [{
-    path: '/test',
-    name: 'test',
-    component: () => import('@/docs/test.md')
-  }]
+  routes: [
+    {
+      path: '/',
+      redirect:"/index"
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: () => import('@/docs/test.md')
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('@/docs/test.md')
+    }
+  ]
 })

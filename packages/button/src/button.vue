@@ -50,6 +50,7 @@
   text-align: center;
   overflow: hidden;
   box-sizing: border-box;
+  font-size: 16px;
   //width: 100%;
   z-index: 1;
   cursor: pointer;

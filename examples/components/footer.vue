@@ -4,22 +4,22 @@
  * @github: https://github.com/sulgweb
  * @lastEditors: 小羽
  * @Date: 2020-10-27 00:29:37
- * @LastEditTime: 2020-10-28 13:42:47
+ * @LastEditTime: 2020-10-29 01:47:33
  * @Copyright: 1.0.0
 -->
 
 <template>
   <div class="page-footer">
     <div class="footer-container">
-      <div type="flex" justify="space-between">
+      <div type="flex" justify="space-between" class="footer-item">
         <div :span="12" class="text-left">
-          <a href="https://sulgweb.github.io/">
+          <a href="https://sulgweb.github.io/" target="_blank">
             <img src="../assets/images/avater.jpg" width="80">
           </a>
           <div>
             <p>作者: 小羽</p>
-            <p>邮箱: 821760648@qq.com </p>
-            <div style="display:flex">
+            <p>邮箱: xiaoyu@sulg.top / 821760648@qq.com </p>
+            <div style="display:flex;flex-wrap:wrap">
               <a href="https://blog.sulg.top" target="_blank" style="margin-right:16px">博客</a>
               <a href="https://github.com/sulgweb" target="_blank" style="margin-right:16px">Github</a>
               <a href="https://gitee.com/xiaoyu-web" target="_blank" style="margin-right:16px">Gitee</a>
@@ -27,6 +27,26 @@
               <a href="https://juejin.im/user/3597257778926973" target="_blank" style="margin-right:16px">掘金</a>
               <a href="https://www.jianshu.com/u/4ab50cbafc3f" target="_blank" style="margin-right:16px">简书</a>
               <a href="https://www.zhihu.com/people/xiao-yu-46-25-83" target="_blank" style="margin-right:16px">知乎</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div type="flex" justify="space-between" class="footer-item">
+        <div :span="12" class="text-left">
+          <a href="" target="_blank">
+            <img src="../assets/images/avater1.jpg" width="80">
+          </a>
+          <div>
+            <p>作者: vinceliang</p>
+            <p>邮箱: 765706340@qq.com </p>
+            <div style="display:flex;flex-wrap:wrap">
+              <!-- <a href="https://blog.sulg.top" target="_blank" style="margin-right:16px">博客</a> -->
+              <a href="https://github.com/vinceliang1" target="_blank" style="margin-right:16px">Github</a>
+              <!-- <a href="https://gitee.com/xiaoyu-web" target="_blank" style="margin-right:16px">Gitee</a>
+              <a href="https://blog.csdn.net/fly821760648" target="_blank" style="margin-right:16px">CSDN</a>
+              <a href="https://juejin.im/user/3597257778926973" target="_blank" style="margin-right:16px">掘金</a>
+              <a href="https://www.jianshu.com/u/4ab50cbafc3f" target="_blank" style="margin-right:16px">简书</a>
+              <a href="https://www.zhihu.com/people/xiao-yu-46-25-83" target="_blank" style="margin-right:16px">知乎</a> -->
             </div>
           </div>
         </div>
@@ -46,10 +66,15 @@
     .footer-container{
       width: 90%;
       margin: 0 auto;
+      display: flex;
+    }
+    .footer-item{
+      width: 33%;
     }
     .text-left {
       font-size: 12px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       color: #5e6d82;
       img{

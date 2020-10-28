@@ -29,6 +29,11 @@ export default new VueRouter({
           name: 'icon',
           component: () => import('@/docs/icon.md')
         },
+        {
+          path: 'layout',
+          name: 'layout',
+          component: () => import('@/docs/layout.md')
+        }
       ]
     },
     /* {

@@ -155,6 +155,23 @@
 ```
 :::
 
+### Icon 按钮
+
+<div class="demo-block">
+  <div>
+    <su-button icon="electronics">icon 按钮</su-button>
+  </div>
+</div>
+
+
+::: demo
+```html
+<div>
+  <su-button icon="electronics">icon 按钮</su-button>
+</div>
+```
+:::
+
 ### 按钮动画效果
 <div class="demo-block">
 

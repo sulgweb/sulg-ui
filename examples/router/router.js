@@ -8,17 +8,33 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      redirect:"/index"
+      redirect:"/index",
     },
     {
       path: '/index',
       name: 'index',
-      component: () => import('@/docs/test.md')
+      component:()=>import("@/pages/index.vue"),
+      children:[
+        {
+          path: '/',
+          component: () => import('@/docs/introduce.md')
+        },
+        {
+          path: 'button',
+          name: 'button',
+          component: () => import('@/docs/button.md')
+        },
+        {
+          path: 'icon',
+          name: 'icon',
+          component: () => import('@/docs/icon.md')
+        },
+      ]
     },
-    {
-      path: '/test',
-      name: 'test',
-      component: () => import('@/docs/test.md')
-    }
+    /* {
+      path: '/button',
+      name: 'button',
+      component: () => import('@/docs/button.md')
+    } */
   ]
 })

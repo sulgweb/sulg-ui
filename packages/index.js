@@ -1,7 +1,9 @@
 import SuButton from './button/index'
+import SuIcon from './icon/index'
  
 const components = [
-  SuButton
+  SuButton,
+  SuIcon
 ];
  
 const install = function (Vue) {
@@ -15,5 +17,6 @@ if (typeof window.Vue !== "undefined" && window.Vue) {
  
 export default {
     install,
-    SuButton
+    SuButton,
+    SuIcon
 }

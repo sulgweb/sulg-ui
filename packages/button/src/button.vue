@@ -5,7 +5,10 @@
       animation&&type?'su-button-'+type+'-'+animation:'',
       bgColor&&type?'su-button-'+type+'-bg':''
     ]">
-      <slot></slot>
+      <i :class="['sulg-icon-'+icon]" style="font-size: 1.5em;margin-right:5px" v-if="icon"></i>
+      <span>
+        <slot></slot>
+      </span>
     </div>
 </template>
  
@@ -28,6 +31,10 @@
         bgColor:{
           type:Boolean,
           default:false
+        },
+        icon:{
+          type: String,
+          default: ''
         }
       }
     }
@@ -51,6 +58,10 @@
   overflow: hidden;
   box-sizing: border-box;
   font-size: 16px;
+  //line-height: 1;
+  outline: none;
+  white-space: nowrap;
+  text-rendering: auto;
   //width: 100%;
   z-index: 1;
   cursor: pointer;

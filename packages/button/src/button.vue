@@ -5,8 +5,8 @@
       animation&&type?'su-button-'+type+'-'+animation:'',
       bgColor&&type?'su-button-'+type+'-bg':''
     ]">
-      <i :class="['sulg-icon-'+icon]" style="font-size: 1.5em;margin-right:5px" v-if="icon"></i>
-      <span>
+      <i :class="['sulg-icon-'+icon]" style="font-size: 1.5em;margin-right:5px;vertical-align:middle;" v-if="icon"></i>
+      <span style="vertical-align:middle;">
         <slot></slot>
       </span>
     </div>
@@ -58,7 +58,6 @@
   overflow: hidden;
   box-sizing: border-box;
   font-size: 16px;
-  //line-height: 1;
   outline: none;
   white-space: nowrap;
   text-rendering: auto;

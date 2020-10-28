@@ -1,9 +1,15 @@
+<!--
+ * @description: 
+ * @author: 小羽
+ * @github: https://github.com/sulgweb
+ * @lastEditors: 小羽
+ * @Date: 2020-10-28 23:33:39
+ * @LastEditTime: 2020-10-29 01:30:18
+ * @Copyright: 1.0.0
+-->
 # 介绍
 
 ----
-<div style="color:#f00;font-size:16px">
-  <i class="sulg-icon icon-etrical-equipm" >11</i>
-</div>
 
 `SULG-UI` 是一款基于 `Vue.js 2.0` 的前端 UI 组件库，主要用于快速开发 PC 网站中后台产品
 

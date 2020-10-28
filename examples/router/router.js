@@ -13,10 +13,12 @@ export default new VueRouter({
     {
       path: '/index',
       name: 'index',
+      redirect: "index/introduce",
       component:()=>import("@/pages/index.vue"),
       children:[
         {
-          path: '/',
+          path: 'introduce',
+          name: 'introduce',
           component: () => import('@/docs/introduce.md')
         },
         {

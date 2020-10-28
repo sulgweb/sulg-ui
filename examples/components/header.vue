@@ -4,14 +4,14 @@
  * @github: https://github.com/sulgweb
  * @lastEditors: 小羽
  * @Date: 2020-10-27 00:29:37
- * @LastEditTime: 2020-10-27 01:31:22
+ * @LastEditTime: 2020-10-29 01:35:07
  * @Copyright: 1.0.0
 -->
 <template>
   <header class="page-header">
     <div class="header-container">
       <router-link :to="{name: 'index'}"><img src="../assets/images/logo.jpg" width="80px"></router-link>
-      <router-link :to="{name: 'giud'}">组件</router-link>
+      <router-link :to="{name: 'introduce'}">组件</router-link>
     </div>
   </header>
 </template>

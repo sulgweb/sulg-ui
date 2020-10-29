@@ -4,7 +4,7 @@
  * @github: https://github.com/sulgweb
  * @lastEditors: 小羽
  * @Date: 2020-10-26 23:52:29
- * @LastEditTime: 2020-10-28 15:14:35
+ * @LastEditTime: 2020-10-29 11:40:21
  * @Copyright: 1.0.0
  */
 import Vue from 'vue'
@@ -16,7 +16,7 @@ import 'github-markdown-css/github-markdown.css'
 //import './assets/md.less'
 
 //icon字体库
-import "@/assets/iconfont/iconfont.css"
+//import "@/assets/iconfont/iconfont.css"
 
 // 代码高亮的js
 import hljs from 'highlight.js'
@@ -31,7 +31,9 @@ Vue.directive('highlight',function (el) {
 
 import demoBlock from './components/demo-block.vue'
 Vue.component('demo-block', demoBlock)
+//引入SulgUI
 import SulgUI from '~/index'
+import '../packages/theme-default/lib/index.css'
 Vue.use(SulgUI)
 
 Vue.config.productionTip = false

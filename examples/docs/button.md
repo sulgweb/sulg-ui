@@ -211,7 +211,7 @@
     <su-button animation="expend-tend-right">expend-tend-right</su-button>
   </div>
   <div>
-    <su-button animation="expend-tend-right">expend-tend-left</su-button>
+    <su-button animation="expend-tend-left">expend-tend-left</su-button>
   </div>
 </div>
 
@@ -252,7 +252,7 @@
   <su-button animation="expend-tend-right">expend-tend-right</su-button>
 </div>
 <div>
-  <su-button animation="expend-tend-right">expend-tend-left</su-button>
+  <su-button animation="expend-tend-left">expend-tend-left</su-button>
 </div>
 ```
 :::

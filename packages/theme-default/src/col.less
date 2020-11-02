@@ -3,12 +3,23 @@
   box-sizing: border-box;
 }
 
+/* .su-col-1, .su-col-2, .su-col-3, .su-col-4, .su-col-5, .su-col-6, .su-col-7, .su-col-8, .su-col-9, .su-col-10, .su-col-11, .su-col-12, .su-col-13, .su-col-14, .su-col-15, .su-col-16, .su-col-17, .su-col-18, .su-col-19, .su-col-20, .su-col-21, .su-col-22, .su-col-23, .su-col-24 {
+  float: left;
+  box-sizing: border-box;
+} */
 .su-col-0 {
+  width: 0;
+}
+.su-col-0,.su-col-xs-0,.su-col-xl-0,.su-col-sm-0,.su-col-md-0,.su-col-lg-0 {
   display: none;
 }
 
-.loop(@i) when (@i < 24){
+@typelist: xs,sm,md,lg,xl;
+
+.loop(@i) when (@i <= 24){
   .su-col-@{i} {
+    float: left;
+    box-sizing: border-box;
     width: (1 / 24 * @i * 100) * 1%;
   }
 
@@ -27,137 +38,149 @@
   }
   .loop(@i+1);
 }
+.loop(1);
 
-@include res(xs) {
-  .su-col-xs-0 {
-    display: none;
-  }
-  .loop-xs(@i) when (@i < 24){
-    .su-col-xs-@{i} {
+
+
+.loopItem(@type){
+  .loopitem(@i) when (@i <= 24){
+    .su-col-@{type}-@{i} {
       width: (1 / 24 * @i * 100) * 1%;
     }
-
-    .su-col-xs-offset-@{i} {
+  
+    .su-col-@{type}-offset-@{i} {
       margin-left: (1 / 24 * @i * 100) * 1%;
     }
-
-    .su-col-xs-pull-@{i} {
+  
+    .su-col-@{type}-pull-@{i} {
       position: relative;
       right: (1 / 24 * @i * 100) * 1%;
     }
-
-    .su-col-xs-push-@{i} {
+  
+    .su-col-@{type}-push-@{i} {
       position: relative;
       left: (1 / 24 * @i * 100) * 1%;
     }
-    .loop-xs(@i+1);
+    .loopitem(@i+1);
   }
-  .loop-xs(1)
+  .loopitem(1);
+}
+.loopType(@j)when(@j<length(@typelist)+1){
+  .loopItem(extract(@typelist,@j));
+  .loopType(@j+1);
+}
+.loopType(1);
+
+
+/* .loop-xs(@i) when (@i < 24){
+  .su-col-xs-@{i} {
+    width: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-xs-offset-@{i} {
+    margin-left: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-xs-pull-@{i} {
+    position: relative;
+    right: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-xs-push-@{i} {
+    position: relative;
+    left: (1 / 24 * @i * 100) * 1%;
+  }
+  .loop-xs(@i+1);
+}
+.loop-xs(1);
+
+
+.loop-sm(@i) when (@i < 24){
+  .su-col-sm-@{i} {
+    width: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-sm-offset-@{i} {
+    margin-left: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-sm-pull-@{i} {
+    position: relative;
+    right: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-sm-push-@{i} {
+    position: relative;
+    left: (1 / 24 * @i * 100) * 1%;
+  }
+  .loop-sm(@i+1);
 }
 
-@include res(sm) {
-  .su-col-sm-0 {
-    display: none;
+
+.loop-md(@i) when (@i < 24){
+  .su-col-md-@{i} {
+    width: (1 / 24 * @i * 100) * 1%;
   }
-  .loop(@i) when (@i < 24){
-    .su-col-sm-@{i} {
-      width: (1 / 24 * @i * 100) * 1%;
-    }
 
-    .su-col-sm-offset-@{i} {
-      margin-left: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-sm-pull-@{i} {
-      position: relative;
-      right: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-sm-push-@{i} {
-      position: relative;
-      left: (1 / 24 * @i * 100) * 1%;
-    }
-    .loop(@i+1);
+  .su-col-md-offset-@{i} {
+    margin-left: (1 / 24 * @i * 100) * 1%;
   }
+
+  .su-col-md-pull-@{i} {
+    position: relative;
+    right: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-md-push-@{i} {
+    position: relative;
+    left: (1 / 24 * @i * 100) * 1%;
+  }
+  .loop-md(@i+1);
 }
+.loop-md(1);
 
-@include res(md) {
-  .su-col-md-0 {
-    display: none;
+
+.loop-lg(@i) when (@i < 24){
+  .su-col-lg-@{i} {
+    width: (1 / 24 * @i * 100) * 1%;
   }
-  .loop-md(@i) when (@i < 24){
-    .su-col-md-@{i} {
-      width: (1 / 24 * @i * 100) * 1%;
-    }
 
-    .su-col-md-offset-@{i} {
-      margin-left: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-md-pull-@{i} {
-      position: relative;
-      right: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-md-push-@{i} {
-      position: relative;
-      left: (1 / 24 * @i * 100) * 1%;
-    }
-    .loop-md(@i+1);
+  .su-col-lg-offset-@{i} {
+    margin-left: (1 / 24 * @i * 100) * 1%;
   }
-  .loop-md(1)
+
+  .su-col-lg-pull-@{i} {
+    position: relative;
+    right: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-lg-push-@{i} {
+    position: relative;
+    left: (1 / 24 * @i * 100) * 1%;
+  }
+  .loop-lg(@i+1);
 }
+.loop-lg(1);
 
-@include res(lg) {
-  .su-col-lg-0 {
-    display: none;
+
+.loop-xl(@i) when (@i < 24){
+  .su-col-xl-@{i} {
+    width: (1 / 24 * @i * 100) * 1%;
   }
-  .loop-lg(@i) when (@i < 24){
-    .su-col-lg-@{i} {
-      width: (1 / 24 * @i * 100) * 1%;
-    }
 
-    .su-col-lg-offset-@{i} {
-      margin-left: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-lg-pull-@{i} {
-      position: relative;
-      right: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-lg-push-@{i} {
-      position: relative;
-      left: (1 / 24 * @i * 100) * 1%;
-    }
-    .loop-lg(@i+1);
+  .su-col-xl-offset-@{i} {
+    margin-left: (1 / 24 * @i * 100) * 1%;
   }
-  .loop-lg(1)
+
+  .su-col-xl-pull-@{i} {
+    position: relative;
+    right: (1 / 24 * @i * 100) * 1%;
+  }
+
+  .su-col-xl-push-@{i} {
+    position: relative;
+    left: (1 / 24 * @i * 100) * 1%;
+  }
+  .loop-xl(@i+1);
 }
-
-@include res(xl) {
-  .su-col-xl-0 {
-    display: none;
-  }
-  .loop-xl(@i) when (@i < 24){
-    .su-col-xl-@{i} {
-      width: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-xl-offset-@{i} {
-      margin-left: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-xl-pull-@{i} {
-      position: relative;
-      right: (1 / 24 * @i * 100) * 1%;
-    }
-
-    .su-col-xl-push-@{i} {
-      position: relative;
-      left: (1 / 24 * @i * 100) * 1%;
-    }
-    .loop-xl(@i+1);
-  }
-  .loop-xl(1)
-}
+.loop-xl(1); */

@@ -1,49 +1,54 @@
-@import "common/var";
-//@import "mixins/mixins";
-//@import "mixins/utils";
+.su-row:after,
+.su-row:before {
+  display: table;
+  content: ""
+}
 
-@include b(row) {
+.su-row:after {
+  clear: both
+}
+
+.su-row {
   position: relative;
-  box-sizing: border-box;
-  zoom: 1;
-    &:before,
-    &:after {
-      content: "";
-      display: table;
-    }
-    &:after {
-      clear: both;
-      visibility: hidden;
-      font-size: 0;
-      height: 0;
-  }
+  box-sizing: border-box
+}
 
-  @include m(flex) {
-    display: flex;
-    &:before,
-    &:after {
-      display: none;
-    }
+.su-row--flex {
+  display: -ms-flexbox;
+  display: flex
+}
 
-    @include when(justify-center) {
-      justify-content: center;
-    }
-    @include when(justify-end) {
-      justify-content: flex-end;
-    }
-    @include when(justify-space-between) {
-      justify-content: space-between;
-    }
-    @include when(justify-space-around) {
-      justify-content: space-around;
-    }
+.su-row--flex:after,
+.su-row--flex:before {
+  display: none
+}
 
-    @include when(align-middle) {
-      align-items: center;
-    }
-    @include when(align-bottom) {
-      align-items: flex-end;
-    }
-  }
+.su-row--flex.is-align-bottom {
+  -ms-flex-align: end;
+  align-items: flex-end
+}
 
+.su-row--flex.is-align-middle {
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.su-row--flex.is-justify-space-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+
+.su-row--flex.is-justify-space-between {
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+.su-row--flex.is-justify-end {
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+
+.su-row--flex.is-justify-center {
+  -ms-flex-pack: center;
+  justify-content: center
 }

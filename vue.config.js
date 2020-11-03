@@ -67,7 +67,7 @@ module.exports = {
     // 重新设置目录别名
     config.resolve.alias
       .set("@", path.resolve("examples"))
-      .set("~", path.resolve("packages"));
+      .set("@packages", path.resolve("packages"));
 
     // 使 examples及packages目录下的js文件都加入编译
     config.module

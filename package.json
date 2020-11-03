@@ -1,6 +1,6 @@
 {
   "name": "sulg-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "xiaoyu <xiaoyu@sulg.top / 821760648@qq.com>",
   "main": "packages/index.js",
   "scripts": {

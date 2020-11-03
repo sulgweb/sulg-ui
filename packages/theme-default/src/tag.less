@@ -1,0 +1,31 @@
+@import "./common/var.less";
+
+.su-tag(@typeName,@typeColor,@typeColorBg) {
+  .su-tag{
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    &-@{typeName}{
+      padding: 5px 10px;
+      border: 1px solid @typeColor;
+      box-sizing: border-box;
+      color: @typeColor;
+      overflow: hidden;
+      &-bg{
+        background: @typeColorBg;
+      }
+    }
+    &-icon{
+      position: absolute;
+      right: 5px;
+      top: 7px;
+      cursor: pointer;
+    }
+  }
+}
+
+.loopTag(@i) when (@i < length(@typeList)+1){
+  .su-tag(extract(@typeList, @i),extract(@typeColorList, @i),extract(@typeColorBgList,@i));
+  .loopTag(@i+1);
+}
+.loopTag(1);

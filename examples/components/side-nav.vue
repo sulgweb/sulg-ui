@@ -66,11 +66,11 @@
                   "name": "button",
                   "path": "/button"
                 },
-                /* {
+                {
                   "desc": "Tag 标签",
                   "name": "tag",
                   "path": "/tag"
-                } */
+                }
               ]
             },
             {

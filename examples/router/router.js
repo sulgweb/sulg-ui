@@ -27,6 +27,11 @@ export default new VueRouter({
           component: () => import('@/docs/button.md')
         },
         {
+          path: 'tag',
+          name: 'tag',
+          component: () => import('@/docs/tag.md')
+        },
+        {
           path: 'icon',
           name: 'icon',
           component: () => import('@/docs/icon.md')

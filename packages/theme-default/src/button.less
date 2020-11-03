@@ -304,11 +304,11 @@
   }
 }
 
-.loop(@i) when (@i < length(@typeList)+1){
+.loopButton(@i) when (@i < length(@typeList)+1){
     .su-button(extract(@typeList, @i),extract(@typeColorList, @i),extract(@typeColorBgList,@i));
-    .loop(@i+1);
+    .loopButton(@i+1);
 }
-.loop(1);
+.loopButton(1);
 @keyframes criss-cross-left {
   0% {
     left: -20px;

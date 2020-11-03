@@ -6,7 +6,7 @@
       bgColor&&type?'su-button-'+type+'-bg':''
     ]">
       <i :class="['sulg-icon-'+icon]" style="font-size: 1.5em;margin-right:5px;vertical-align:middle;" v-if="icon"></i>
-      <span :style="[icon?'vertical-align:middle':'']">
+      <span :style="icon?'vertical-align:middle':''">
         <slot></slot>
       </span>
     </div>

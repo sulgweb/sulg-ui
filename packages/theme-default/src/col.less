@@ -16,7 +16,7 @@
 
 @typelist: xs,sm,md,lg,xl;
 
-.loop(@i) when (@i <= 24){
+.loopCol(@i) when (@i <= 24){
   .su-col-@{i} {
     float: left;
     box-sizing: border-box;
@@ -36,9 +36,9 @@
     position: relative;
     left: (1 / 24 * @i * 100) * 1%;
   }
-  .loop(@i+1);
+  .loopCol(@i+1);
 }
-.loop(1);
+.loopCol(1);
 
 
 

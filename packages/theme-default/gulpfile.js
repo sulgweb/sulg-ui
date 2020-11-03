@@ -4,7 +4,7 @@
  * @github: https://github.com/sulgweb
  * @lastEditors: 小羽
  * @Date: 2020-10-29 00:19:16
- * @LastEditTime: 2020-10-29 00:56:17
+ * @LastEditTime: 2020-11-03 17:25:13
  * @Copyright: 1.0.0
  */
 'use strict';
@@ -27,7 +27,7 @@ function compile() {
 
 function copyfont() {
   return src('./src/fonts/**')
-    .pipe(cssmin())
+    //.pipe(cssmin())
     .pipe(dest('./lib/fonts'));
 }
 

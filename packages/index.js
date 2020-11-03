@@ -2,12 +2,14 @@ import SuButton from './button/index'
 import SuIcon from './icon/index'
 import SuCol from './col/index'
 import SuRow from './row/index'
+import SuTag from "./tag/index"
  
 const components = [
   SuButton,
   SuIcon,
   SuCol,
-  SuRow
+  SuRow,
+  SuTag
 ];
  
 const install = function (Vue) {
@@ -24,5 +26,6 @@ export default {
   SuButton,
   SuIcon,
   SuCol,
-  SuRow
+  SuRow,
+  SuTag
 }

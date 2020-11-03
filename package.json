@@ -3,7 +3,6 @@
   "version": "0.0.2-0",
   "author": "xiaoyu <xiaoyu@sulg.top / 821760648@qq.com>",
   "main": "packages/index.js",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "lib": "vue-cli-service build --target lib --name SulgUi --dest lib packages/index.js",

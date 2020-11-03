@@ -1,0 +1,9 @@
+{
+  "name": "sulg-ui",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  }
+}

@@ -3,13 +3,15 @@ import SuIcon from './icon/index'
 import SuCol from './col/index'
 import SuRow from './row/index'
 import SuTag from "./tag/index"
+import SuSwitch from './switch/index'
  
 const components = [
   SuButton,
   SuIcon,
   SuCol,
   SuRow,
-  SuTag
+  SuTag,
+  SuSwitch
 ];
  
 const install = function (Vue) {
@@ -23,9 +25,5 @@ if (typeof window.Vue !== "undefined" && window.Vue) {
  
 export default {
   install,
-  SuButton,
-  SuIcon,
-  SuCol,
-  SuRow,
-  SuTag
+  ...components
 }

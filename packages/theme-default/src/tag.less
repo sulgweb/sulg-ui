@@ -5,7 +5,7 @@
     display: inline-block;
     position: relative;
     margin-right: 10px;
-    &-@{typeName}{
+    &__@{typeName}{
       padding: 5px 10px;
       border: 1px solid @typeColor;
       box-sizing: border-box;
@@ -15,7 +15,10 @@
         background: @typeColorBg;
       }
     }
-    &-icon{
+    &__round{
+      border-radius: 50px;
+    }
+    &__icon{
       position: absolute;
       right: 5px;
       top: 7px;

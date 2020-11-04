@@ -4,7 +4,7 @@
  * @github: https://github.com/sulgweb
  * @lastEditors: 小羽
  * @Date: 2020-10-26 23:52:29
- * @LastEditTime: 2020-11-03 23:47:23
+ * @LastEditTime: 2020-11-04 11:37:13
  * @Copyright: 1.0.0
  */
 import Vue from 'vue'
@@ -31,6 +31,7 @@ Vue.directive('highlight',function (el) {
 
 import demoBlock from './components/demo-block.vue'
 Vue.component('demo-block', demoBlock)
+
 //引入SulgUI
 import SulgUI from '@packages/index'
 import '../packages/theme-default/lib/index.css'

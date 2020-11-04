@@ -25,7 +25,7 @@
               "path": "/introduce",
               "desc": "介绍"
             },
-            /* {
+            {
               "name": "install",
               "path": "/install",
               "desc": "安装"
@@ -35,7 +35,7 @@
               "path": "/start",
               "desc": "快速开始"
             },
-            {
+            /* {
               "name": "index",
               "path": "/",
               "type": "pages"
@@ -70,6 +70,11 @@
                   "desc": "Tag 标签",
                   "name": "tag",
                   "path": "/tag"
+                },
+                {
+                  "desc": "Switch 开关",
+                  "name": "switch",
+                  "path": "/switch"
                 }
               ]
             },

@@ -1,8 +1,12 @@
 <template>
   <div class="su-tag" >
-    <div :class="['su-tag-'+type,bgColor&&type?'su-button-'+type+'-bg':'']" >
+    <div :class="[
+        'su-tag__'+type,
+        bgColor&&type?'su-tag__'+type+'-bg':'',
+        round?'su-tag__round':''
+      ]" >
       <span :style="closable?'margin-right: 24px;':''"><slot></slot></span>
-      <i class="sulg-icon-close su-tag-icon" v-if="closable" @click="hiddenTag"></i>
+      <i class="sulg-icon-close su-tag__icon" v-if="closable" @click="hiddenTag"></i>
     </div>
   </div>
 </template>
@@ -22,6 +26,10 @@ export default {
     bgColor:{
       type:Boolean,
       default:false
+    },
+    round:{
+      type:Boolean,
+      default:false
     }
   },
   methods: {
@@ -32,7 +40,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less" scoped>
-
-</style>

@@ -1,6 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+
+let baseRoutes = []
+let files = require.context('@/docs/base', true, /\.md$/)
+
+files.keys().forEach(key=>{
+    let newKey = key.replace(/(\.\/|\.md)/g, '')
+    let data = {
+      path:newKey,
+      name:newKey,
+      component:require(`@/docs/base/${newKey}.md`).default
+    }
+    baseRoutes.push(data)
+})
+console.log("baseRoutes", baseRoutes)
+
 //路由统一注册
 Vue.use(VueRouter)
 export default new VueRouter({
@@ -17,6 +32,22 @@ export default new VueRouter({
       component:()=>import("@/pages/index.vue"),
       children:[
         {
+          path: 'introduce',
+          name: 'introduce',
+          component: () => import('@/docs/introduce.md')
+        },
+        {
+          path: 'install',
+          name: "install",
+          component: () => import('@/docs/install.md')
+        },
+        {
+          path: 'start',
+          name: "start",
+          component: () => import('@/docs/start.md')
+        },
+        ...baseRoutes
+        /* {
           path: 'introduce',
           name: 'introduce',
           component: () => import('@/docs/introduce.md')
@@ -40,7 +71,12 @@ export default new VueRouter({
           path: 'layout',
           name: 'layout',
           component: () => import('@/docs/layout.md')
-        }
+        },
+        {
+          path: 'switch',
+          name: 'switch',
+          component: () => import('@/docs/switch.md')
+        } */
       ]
     },
     /* {

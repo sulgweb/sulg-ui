@@ -7,7 +7,7 @@
 # Tag 标签
 ----
 ### 基础用法
-由`type`属性来选择tag的类型，也可以通过`color`属性来自定义背景色。
+由`type`属性来选择tag的类型。
 
 <div class="demo-block">
   <su-tag>标签一</su-tag>
@@ -27,6 +27,32 @@
   <su-tag type="succcess">标签四</su-tag>
   <su-tag type="default">标签五</su-tag>
   <su-tag type="info">标签六</su-tag>
+
+```
+:::
+
+
+### 开启圆角
+由`round`属性来选择是否开启圆角。
+
+<div class="demo-block">
+  <su-tag round>标签一</su-tag>
+  <su-tag type="error" round>标签二</su-tag>
+  <su-tag type="warning" round>标签三</su-tag>
+  <su-tag type="success" round>标签四</su-tag>
+  <su-tag type="default" round>标签五</su-tag>
+  <su-tag type="info" round>标签六</su-tag>
+</div>
+
+::: demo
+```html
+
+  <su-tag round>标签一</su-tag>
+  <su-tag type="error" round>标签二</su-tag>
+  <su-tag type="warning" round>标签三</su-tag>
+  <su-tag type="success" round>标签四</su-tag>
+  <su-tag type="default" round>标签五</su-tag>
+  <su-tag type="info" round>标签六</su-tag>
 
 ```
 :::

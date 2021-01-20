@@ -75,6 +75,11 @@
                   "desc": "Switch 开关",
                   "name": "switch",
                   "path": "/switch"
+                },
+                {
+                  "desc": "数字动画",
+                  "name": "numAnimate",
+                  "path": "/numAnimate"
                 }
               ]
             },

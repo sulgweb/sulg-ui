@@ -4,6 +4,7 @@ import SuCol from './col/index'
 import SuRow from './row/index'
 import SuTag from "./tag/index"
 import SuSwitch from './switch/index'
+import SuNumAnimate from './numAnimate/index'
  
 const components = [
   SuButton,
@@ -11,7 +12,8 @@ const components = [
   SuCol,
   SuRow,
   SuTag,
-  SuSwitch
+  SuSwitch,
+  SuNumAnimate
 ];
  
 const install = function (Vue) {

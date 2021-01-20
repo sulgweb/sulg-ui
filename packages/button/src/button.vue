@@ -4,7 +4,7 @@
       type?'su-button-'+type:'',
       animation&&type?'su-button-'+type+'-'+animation:'',
       bgColor&&type?'su-button-'+type+'-bg':''
-    ]">
+    ]" @click="$emit('click')">
       <i :class="['sulg-icon-'+icon]" style="font-size: 1.5em;margin-right:5px;vertical-align:middle;" v-if="icon"></i>
       <span :style="icon?'vertical-align:middle':''">
         <slot></slot>

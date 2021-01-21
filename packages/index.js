@@ -5,6 +5,7 @@ import SuRow from './row/index'
 import SuTag from "./tag/index"
 import SuSwitch from './switch/index'
 import SuNumAnimate from './numAnimate/index'
+import {SuModal,jsSuModall} from './modal/index'
  
 const components = [
   SuButton,
@@ -13,12 +14,14 @@ const components = [
   SuRow,
   SuTag,
   SuSwitch,
-  SuNumAnimate
+  SuNumAnimate,
+  SuModal,
 ];
  
 const install = function (Vue) {
   if (install.installed) return;
   components.map(component => Vue.component(component.name, component));
+  Vue.prototype.$SuModal = jsSuModall
 };
  
 if (typeof window.Vue !== "undefined" && window.Vue) {

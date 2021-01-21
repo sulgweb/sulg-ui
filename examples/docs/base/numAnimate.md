@@ -42,8 +42,24 @@
 
 ::: demo
 ```html
-
+<template>
   <su-num-animate :amount="123456789.123" :time="5000" thousand></su-num-animate>
+<template>
+
+<script>
+export default {
+    data() {
+      return {
+        addNumStart:false
+      };
+    },
+    methods: {
+      handleStart() {
+        this.addNumStart = true
+      }
+    }
+  }
+</script>
 
 ```
 :::

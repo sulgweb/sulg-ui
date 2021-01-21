@@ -1,0 +1,37 @@
+@import "./common/var.less";
+
+.su-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  &__mask{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: rgba(#000,0.2);
+  }
+  &__main{
+    position: relative;;
+    background: #fff;
+    min-width: 300px;
+    min-height: 60px;
+    padding: 10px;
+    top: 30px;
+    left: 50vw;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+    &-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      &-left{}
+      &-right{
+        cursor:pointer;
+        font-size: 10px;
+      }
+    }
+  }
+}

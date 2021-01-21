@@ -4,14 +4,16 @@
  * @github: https://github.com/sulgweb
  * @lastEditors: 小羽
  * @Date: 2020-10-27 00:29:37
- * @LastEditTime: 2020-10-29 01:35:07
+ * @LastEditTime: 2021-01-21 10:50:54
  * @Copyright: 1.0.0
 -->
 <template>
   <header class="page-header">
     <div class="header-container">
       <router-link :to="{name: 'index'}"><img src="../assets/images/logo.jpg" width="80px"></router-link>
-      <router-link :to="{name: 'introduce'}">组件</router-link>
+      <div class="header-container-github" @click="openGithub">
+        <img style="width:48px;" src="../assets/images/github.jpg"/>github
+      </div>
     </div>
   </header>
 </template>
@@ -20,6 +22,11 @@
   export default {
     data () {
       return {}
+    },
+    methods:{
+      openGithub(){
+        window.open("https://github.com/sulgweb/sulg-ui/tree/release","blank")
+      }
     }
   }
 </script>
@@ -41,13 +48,18 @@
     transition: all .3s;
     z-index: 100;
     .header-container{
-      width: 90%;
+      width: 96%;
       margin: 0 auto;
       display: flex;
       align-items: center;
       height: 80px;
       justify-content: space-between;
       overflow: hidden;
+      &-github{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
     }
   }
 </style>

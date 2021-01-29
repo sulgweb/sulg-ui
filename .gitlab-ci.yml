@@ -1,4 +1,8 @@
-image: node:apline
+default:
+  image: node:apline
+  before_script:
+    - echo Hello World
+
 
 stages:
   - build

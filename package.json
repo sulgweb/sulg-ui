@@ -7,6 +7,7 @@
     "serve": "vue-cli-service serve",
     "lib": "vue-cli-service build --target lib --name SulgUi --dest lib packages/index.js",
     "build": "vue-cli-service build",
+    "gitlab-build":"vue-cli-service build --mode gitlab",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

@@ -56,6 +56,7 @@ const vueMarkdown = {
 
 module.exports = {
   lintOnSave: false,
+  publicPath:process.env.VUE_APP_BASEURL,
   pages: {
     index: {
       entry: "examples/main.js", // js入口文件修改

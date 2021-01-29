@@ -19,7 +19,9 @@ build:
 pages:
   stage: deploy
   script:
+    - ls
     - rm -rf public
+    - ls
     - mkdir public && cp -rf dist/* public
   tags:
     - sulg

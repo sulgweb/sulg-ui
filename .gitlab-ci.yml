@@ -9,6 +9,8 @@ pages:
     - rm -rf public/* 
     - npm install
     - npm run build
+  tags:
+    - sulg
   artifacts: 
     expire_in: 7 days
     paths: 

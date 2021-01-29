@@ -1,22 +1,14 @@
-building: 
-  image: node:15.7.0-alpine3.10
-  stage: build
-  script
-    - npm install --progress=false --no-optional
-    - npm run build
-  artifacts:
-    expire_in: 7 days
-    paths: 
-      - dist 
-
-cache: 
-  paths: 
-    - node_modules/ 
+image: node:15.7.0-alpine3.10
 
 pages: 
   stage: deploy 
+  cache:
+   paths:
+   - node_modules/
   script: 
     - rm -rf public/* 
+    - npm install
+    - npm run build
   artifacts: 
     expire_in: 7 days
     paths: 

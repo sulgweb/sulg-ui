@@ -25,10 +25,6 @@ pages:
     - mkdir public && cp -rf dist/* public
   tags:
     - sulg
-  artifacts:
-    paths:
-      - public
-    expire_in: 30 days
 
 cache:
   paths:

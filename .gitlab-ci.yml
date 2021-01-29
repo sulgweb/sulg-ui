@@ -1,25 +1,38 @@
-building: 
-  image: node:15.7.0-alpine3.10
+default:
+  image: node:apline
+  before_script:
+    - echo Hello World
+
+
+stages:
+  - build
+  - deploy
+
+build:
   stage: build
-  script
-    - npm install --progress=false --no-optional
+  script:
+    - npm install
     - npm run build
+  tags:
+    - sulg
+
+pages:
+  stage: deploy
+  script:
+    - ls
+    - rm -rf public
+    - ls
+    - mkdir public && cp -rf dist/* public
+    - ls public
+  tags:
+    - sulg
   artifacts:
-    expire_in: 7 days
-    paths: 
-      - dist 
+    paths:
+      - public
+    expire_in: 30 days
 
-cache: 
-  paths: 
-    - node_modules/ 
 
-pages: 
-  stage: deploy 
-  script: 
-    - rm -rf public/* 
-  artifacts: 
-    expire_in: 7 days
-    paths: 
-      - public 
-  only: 
-    - master
+cache:
+  paths:
+    - node_modules
+    - dist

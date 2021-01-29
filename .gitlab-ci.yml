@@ -6,7 +6,6 @@ pages:
    paths:
    - node_modules/
   script: 
-    - rm -rf public/* 
     - npm install
     - npm run build
   tags:

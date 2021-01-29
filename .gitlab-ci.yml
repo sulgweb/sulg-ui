@@ -1,18 +1,30 @@
 image: node:15.7.0-alpine3.10
 
-pages: 
-  stage: deploy 
-  cache:
-   paths:
-   - node_modules/
-  script: 
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
     - npm install
     - npm run build
   tags:
     - sulg
-  artifacts: 
-    expire_in: 7 days
-    paths: 
-      - public 
-  only: 
-    - master
+
+pages:
+  stage: deploy
+  script:
+    - rm -rf public
+    - mkdir public && cp -rf dist/* public
+  tags:
+    - sulg
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+
+cache:
+  paths:
+    - node_modules
+    - dist

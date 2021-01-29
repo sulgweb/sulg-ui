@@ -12,7 +12,7 @@ build:
   stage: build
   script:
     - npm install
-    - npm run build
+    - npm run gitlab-build
   tags:
     - sulg
 

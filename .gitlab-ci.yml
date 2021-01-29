@@ -23,8 +23,14 @@ pages:
     - rm -rf public
     - ls
     - mkdir public && cp -rf dist/* public
+    - ls public
   tags:
     - sulg
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+
 
 cache:
   paths:

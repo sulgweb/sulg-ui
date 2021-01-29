@@ -19,7 +19,7 @@ pages:
     - rm -rf public/* 
   artifacts: 
     expire_in: 7 days
-    paths: //路径
+    paths: 
       - public 
   only: 
     - master

@@ -10,7 +10,7 @@ files.keys().forEach(key=>{
     let data = {
       path:newKey,
       name:newKey,
-      component:require(`@/docs/base/${newKey}.md`).default
+      component:()=>import(`@/docs/base/${newKey}.md`)
     }
     baseRoutes.push(data)
 })

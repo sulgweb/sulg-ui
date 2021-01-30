@@ -4,12 +4,13 @@
  * @github: https://github.com/sulgweb
  * @lastEditors: 小羽
  * @Date: 2020-10-26 23:52:29
- * @LastEditTime: 2020-11-04 11:37:13
+ * @LastEditTime: 2021-01-30 10:46:46
  * @Copyright: 1.0.0
  */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/router'
+console.log(router)
 
 
 import 'github-markdown-css/github-markdown.css'

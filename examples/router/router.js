@@ -20,6 +20,7 @@ console.log("baseRoutes", baseRoutes)
 Vue.use(VueRouter)
 export default new VueRouter({
   mode: "history",
+  base:process.env.VUE_APP_BASEROUTER,
   routes: [
     {
       path: '/',

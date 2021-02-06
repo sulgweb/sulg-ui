@@ -92,6 +92,11 @@
               "desc": "视图组件",
               "path": "/component",
               "items": [
+                {
+                  "desc": "虚拟滚动",
+                  "name": "virtualScroll",
+                  "path": "/virtualScroll"
+                }
                 /* {
                   "desc": "Showmore 显示更多",
                   "name": "show-more",

@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-
+// 引入基础组件
 let baseRoutes = []
-let files = require.context('@/docs/base', true, /\.md$/)
-
-files.keys().forEach(key=>{
+let baseFiles = require.context('@/docs/base', true, /\.md$/)
+baseFiles.keys().forEach(key=>{
     let newKey = key.replace(/(\.\/|\.md)/g, '')
     let data = {
       path:newKey,
@@ -14,7 +13,19 @@ files.keys().forEach(key=>{
     }
     baseRoutes.push(data)
 })
-console.log("baseRoutes", baseRoutes)
+
+// 引入视图组件
+let viewRoutes = []
+let viewFiles = require.context('@/docs/view', true, /\.md$/)
+viewFiles.keys().forEach(key=>{
+    let newKey = key.replace(/(\.\/|\.md)/g, '')
+    let data = {
+      path:newKey,
+      name:newKey,
+      component:()=>import(`@/docs/view/${newKey}.md`)
+    }
+    viewRoutes.push(data)
+})
 
 //路由统一注册
 Vue.use(VueRouter)
@@ -47,7 +58,8 @@ export default new VueRouter({
           name: "start",
           component: () => import('@/docs/start.md')
         },
-        ...baseRoutes
+        ...baseRoutes,
+        ...viewRoutes
         /* {
           path: 'introduce',
           name: 'introduce',

@@ -6,6 +6,7 @@ import SuTag from "./tag/index"
 import SuSwitch from './switch/index'
 import SuNumAnimate from './numAnimate/index'
 import {SuModal,jsSuModall} from './modal/index'
+import {SuVirtualScroll} from "./virtual/index"
  
 const components = [
   SuButton,
@@ -16,6 +17,7 @@ const components = [
   SuSwitch,
   SuNumAnimate,
   SuModal,
+  SuVirtualScroll,
 ];
  
 const install = function (Vue) {

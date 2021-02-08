@@ -4,7 +4,7 @@
   }
 </style>
 
-# 虚拟列表
+# 虚拟滚动
 ----
 ### 基础用法
 <su-virtual-scroll id="test" style="height:50vh" :realList="list" :itemSize="itemSize" v-model="virtualList">

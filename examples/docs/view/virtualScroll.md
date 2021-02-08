@@ -121,6 +121,15 @@ export default {
     }
   }
 </script>
+<style scoped>
+  .virtualList1{
+    display:flex;
+    flex-wrap:wrap
+  }
+  .virtualList1-item{
+    width:50%
+  }
+</style>
 ```
 :::
 
@@ -169,13 +178,13 @@ export default {
 </script>
 
 <style scoped>
-.virtualList1{
-  display:flex;
-  flex-wrap:wrap
-}
-.virtualList1-item{
-  width:50%
-}
+  .virtualList1{
+    display:flex;
+    flex-wrap:wrap
+  }
+  .virtualList1-item{
+    width:50%
+  }
 </style>
 
 

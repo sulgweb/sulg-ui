@@ -7,83 +7,56 @@
 # 虚拟列表
 ----
 ### 基础用法
-
-<div class="demo-block">
-  <su-num-animate :amount="3000"></su-num-animate>
-</div>
-
-::: demo
-```html
-
-  <su-num-animate :amount="561512111"></su-num-animate>
-
-```
-:::
-
-### 千分位
-<div class="demo-block">
-  <su-num-animate :amount="123456789.123" thousand></su-num-animate>
-</div>
-
-::: demo
-```html
-
-  <su-num-animate :amount="123456789.123" thousand></su-num-animate>
-
-```
-:::
-
-
-### 持续时间
-
-<div class="demo-block">
-  <su-num-animate :amount="123456789.123" :time="5000" thousand></su-num-animate>
-</div>
-
-::: demo
-```html
-<template>
-  <su-num-animate :amount="123456789.123" :time="5000" thousand></su-num-animate>
-<template>
-
-<script>
-export default {
-    data() {
-      return {
-        addNumStart:false
-      };
-    },
-    methods: {
-      handleStart() {
-        this.addNumStart = true
-      }
-    }
-  }
-</script>
-
-```
-:::
-
-
-### 开始控制
-
-<div class="demo-block">
-  <div>
-    <su-num-animate :amount="123456789.123" :time="5000" thousand :start="addNumStart"></su-num-animate>
+<su-virtual-scroll id="test" style="height:50vh" :realList="list" :itemSize="itemSize" v-model="virtualList">
+  <div 
+    v-for="item in virtualList" 
+    :key="item.id" 
+    :style="{ height: itemSize + 'px', lineHeight: itemSize + 'px' }">
+      <span>{{item.value}}</span>
   </div>
-  <su-button @click="handleStart">开始</su-button>
-</div>
+</su-virtual-scroll>
 
 ::: demo
 ```html
 
-    <div>
-      <su-num-animate :amount="123456789.123" :time="5000" thousand :start="addNumStart"></su-num-animate>
+<template>
+  <su-virtual-scroll id="test" style="height:50vh" :realList="list" :itemSize="itemSize" v-model="virtualList">
+    <div 
+      v-for="item in virtualList" 
+      :key="item.id" 
+      :style="{ height: itemSize + 'px', lineHeight: itemSize + 'px' }">
+        <span>{{item.value}}</span>
     </div>
-    <su-button @click="handleStart">开始</su-button>
+  </su-virtual-scroll>
+</template>
 
+<script>
+export default {
+    data() {
+      return {
+         list:[
+          {id:1,value:1},
+          {id:2,value:2},
+          {id:3,value:3},
+          {id:4,value:4},
+          {id:5,value:5},
+          {id:6,value:6},
+          {id:7,value:7},
+          {id:8,value:8},
+          {id:9,value:9}
+        ],
+        virtualList:[],
+        itemSize:200,
+      };
+    },
+    methods: {
+    }
+  }
+</script>
 ```
 :::
+
+
 
 
 
@@ -91,20 +64,28 @@ export default {
 export default {
     data() {
       return {
-        addNumStart:false
+         list:[
+          {id:1,value:1},
+          {id:2,value:2},
+          {id:3,value:3},
+          {id:4,value:4},
+          {id:5,value:5},
+          {id:6,value:6},
+          {id:7,value:7},
+          {id:8,value:8},
+          {id:9,value:9}
+        ],
+        virtualList:[],
+        itemSize:200,
       };
     },
     methods: {
-      handleStart() {
-        this.addNumStart = true
-      }
     }
   }
 </script>
-</div>
 
 
-
+<!-- 
 ## 参数
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
@@ -112,6 +93,6 @@ export default {
 | amount | 显示的数字（必须） | Number | — |  |
 | time | 持续时间 | Number | — | 1000 |
 | start | 开始变化 | Boolean | — | true |
-| thousand | 千分位 | Boolean | — | false |
+| thousand | 千分位 | Boolean | — | false | -->
 
 

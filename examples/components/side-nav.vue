@@ -52,11 +52,6 @@
               "path": "/component",
               "items": [
                 {
-                  "desc": "Layout 布局",
-                  "name": "layout",
-                  "path": "/layout"
-                },
-                {
                   "desc": "Icon 图标",
                   "name": "icon",
                   "path": "/icon"
@@ -92,6 +87,11 @@
               "desc": "视图组件",
               "path": "/component",
               "items": [
+                {
+                  "desc": "Layout 布局",
+                  "name": "layout",
+                  "path": "/layout"
+                },
                 {
                   "desc": "虚拟滚动",
                   "name": "virtualScroll",

@@ -1,7 +1,7 @@
 <template>
   <div :id="id" @scroll="scrollEvent($event)" class="virtualScroll">
-    <div class="virtualScroll"></div>
-    <div>
+    <div class="virtualScroll-phantom" :style="{ height: listHeight + 'px' }"></div>
+    <div class="virtualScroll-list" :style="{transform:getTransform}">
       <slot></slot>
     </div>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name:"VirtualScroll",
+    name:"SuVirtualScroll",
     props:{
       // 所有列表
       realList:{
@@ -35,10 +35,10 @@
         default:"virtualScroll"
       }
     },
-    compouted:{
+    computed:{
       // 列表总高度
       listHeight(){
-        return Math.ceil(this.realList.length/this.lineNum)*lineHeight
+        return Math.ceil(this.realList.length/this.lineNum)*this.lineHeight
       },
 
       // 可视区域的数量
@@ -70,9 +70,12 @@
     },
     mounted(){
       // 页面数据初始化
-      this.screenHeight = this.$el.clientHeight
-      this.start = 0
-      this.end = this.start + this.visibleCount
+      this.$nextTick(()=>{
+        this.screenHeight = this.$el.clientHeight
+        this.start = 0
+        this.end = this.start + this.visibleCount
+      })
+      
     },
     methods:{
       scrollEvent(){
@@ -94,7 +97,10 @@
     watch:{
       virtualList:{
         handler(newval,oldval){
-          this.$emit("input",newval)
+          this.$nextTick(()=>{
+            this.$emit("input",newval)
+          })
+          
         },
         immediate:true,
         deep:true

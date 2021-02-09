@@ -1,13 +1,13 @@
 {
   "name": "sulg-ui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "xiaoyu <xiaoyu@sulg.top / 821760648@qq.com>",
   "main": "packages/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lib": "vue-cli-service build --target lib --name SulgUi --dest lib packages/index.js",
     "build": "vue-cli-service build",
-    "gitlab-build":"vue-cli-service build --mode gitlab",
+    "gitlab-build": "vue-cli-service build --mode gitlab",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

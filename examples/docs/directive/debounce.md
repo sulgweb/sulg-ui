@@ -2,7 +2,7 @@
  * @description: 
  * @author: 小羽
  * @Date: 2021-02-09 11:17:47
- * @LastEditTime: 2021-02-09 11:32:58
+ * @LastEditTime: 2021-02-09 13:30:22
  * @Copyright: 1.0.0
 -->
 
@@ -58,17 +58,59 @@ export default {
 ```
 :::
 
+### 立即执行
+
+点击后，立即执行一次，然后是正常的防抖。需要添加第四个参数为true。
+
+<div class="demo-block">
+  <div>{{num1}}</div>
+  <su-button v-su-debounce="[addNum1,'click',1000,true]">防抖按钮（立即执行）</su-button>
+</div>
+
+
+::: demo
+```html
+
+<template>
+  <div class="demo-block">
+    <div>{{num1}}</div>
+    <su-button v-su-debounce="[addNum1,'click',1000,true]">防抖按钮（立即执行）</su-button>
+  </div>
+</template>
+
+<script>
+export default {
+    data() {
+      return {
+        num1:0,
+      };
+    },
+    methods: {
+      addNum1() {
+        this.num1++
+      }
+    }
+  }
+</script>
+
+
+```
+:::
 
 <script>
 export default {
     data() {
       return {
         num:0,
+        num1:0,
       };
     },
     methods: {
       addNum() {
         this.num++
+      },
+      addNum1() {
+        this.num1++
       }
     }
   }

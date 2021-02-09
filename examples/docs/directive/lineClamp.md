@@ -2,7 +2,7 @@
  * @description: 
  * @author: 小羽
  * @Date: 2021-02-09 10:28:33
- * @LastEditTime: 2021-02-09 11:00:18
+ * @LastEditTime: 2021-02-09 14:14:27
  * @Copyright: 1.0.0
 -->
 <style>
@@ -15,7 +15,7 @@
 ----
 ### 基础用法
 
-只需要绑定行数即可。
+只需要绑定行数即可，默认为1行。
 
 <div class="demo-block">
   <div v-su-line-clamp="3">

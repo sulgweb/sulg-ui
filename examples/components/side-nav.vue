@@ -67,6 +67,11 @@
                   "path": "/tag"
                 },
                 {
+                  "desc": "Input 输入框",
+                  "name": "input",
+                  "path": "/input"
+                },
+                {
                   "desc": "Switch 开关",
                   "name": "switch",
                   "path": "/switch"
@@ -146,6 +151,11 @@
               "desc": "节流",
               "name": "throttle",
               "path": "/throttle"
+            },
+            {
+              "desc": "复制文本",
+              "name": "copy",
+              "path": "/copy"
             },
           ]
         }

@@ -7,6 +7,7 @@ import SuSwitch from './switch/index'
 import SuNumAnimate from './numAnimate/index'
 import {SuModal,jsSuModall} from './modal/index'
 import {SuVirtualScroll} from "./virtual/index"
+import SuInput from "./input/index"
 
 
 // 引入自定义指令
@@ -22,6 +23,7 @@ const components = [
   SuNumAnimate,
   SuModal,
   SuVirtualScroll,
+  SuInput,
 ];
  
 const install = function (Vue) {

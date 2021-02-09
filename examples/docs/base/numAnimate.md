@@ -45,22 +45,6 @@
 <template>
   <su-num-animate :amount="123456789.123" :time="5000" thousand></su-num-animate>
 <template>
-
-<script>
-export default {
-    data() {
-      return {
-        addNumStart:false
-      };
-    },
-    methods: {
-      handleStart() {
-        this.addNumStart = true
-      }
-    }
-  }
-</script>
-
 ```
 :::
 
@@ -69,18 +53,35 @@ export default {
 
 <div class="demo-block">
   <div>
-    <su-num-animate :amount="123456789.123" :time="5000" thousand :start="addNumStart"></su-num-animate>
+    <su-num-animate :amount="amountData" :time="5000" thousand :start="addNumStart"></su-num-animate>
   </div>
   <su-button @click="handleStart">开始</su-button>
 </div>
 
 ::: demo
 ```html
+<template>
+  <div>
+    <su-num-animate :amount="amountData" :time="5000" thousand :start="addNumStart"></su-num-animate>
+  </div>
+  <su-button @click="handleStart">开始</su-button>
+</template>
 
-    <div>
-      <su-num-animate :amount="123456789.123" :time="5000" thousand :start="addNumStart"></su-num-animate>
-    </div>
-    <su-button @click="handleStart">开始</su-button>
+<script>
+export default {
+    data() {
+      return {
+        addNumStart:false,
+        amountData:123456789.123
+      };
+    },
+    methods: {
+      handleStart() {
+        this.addNumStart = true
+      }
+    }
+  }
+</script>
 
 ```
 :::
@@ -91,7 +92,8 @@ export default {
 export default {
     data() {
       return {
-        addNumStart:false
+        addNumStart:false,
+        amountData:123456789.123
       };
     },
     methods: {
@@ -101,7 +103,6 @@ export default {
     }
   }
 </script>
-</div>
 
 
 

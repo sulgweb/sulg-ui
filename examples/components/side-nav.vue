@@ -137,6 +137,16 @@
               "name": "lineClamp",
               "path": "/lineClamp"
             },
+            {
+              "desc": "防抖",
+              "name": "debounce",
+              "path": "/debounce"
+            },
+            {
+              "desc": "节流",
+              "name": "throttle",
+              "path": "/throttle"
+            },
           ]
         }
       }

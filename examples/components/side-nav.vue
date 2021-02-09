@@ -129,6 +129,14 @@
                 } */
               ]
             }
+          ],
+
+          "指令": [
+            {
+              "desc": "文本按行省略",
+              "name": "lineClamp",
+              "path": "/lineClamp"
+            },
           ]
         }
       }

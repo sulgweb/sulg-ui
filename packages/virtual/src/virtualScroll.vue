@@ -1,7 +1,7 @@
 <template>
-  <div :id="id" @scroll="scrollEvent($event)" class="virtualScroll">
-    <div class="virtualScroll-phantom" :style="{ height: listHeight + 'px' }"></div>
-    <div class="virtualScroll-list" :style="{transform:getTransform}">
+  <div :id="id" @scroll="scrollEvent($event)" class="su__virtualScroll">
+    <div class="su__virtualScroll-phantom" :style="{ height: listHeight + 'px' }"></div>
+    <div class="su__virtualScroll-list" :style="{transform:getTransform}">
       <slot></slot>
     </div>
   </div>
@@ -110,7 +110,7 @@
 </script>
 
 <style lang="less" scoped>
-.virtualScroll{
+.su__virtualScroll{
   height: 100%;
   overflow: auto;
   position: relative;

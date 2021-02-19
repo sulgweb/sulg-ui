@@ -213,6 +213,20 @@
   <div>
     <su-button animation="expend-tend-left">expend-tend-left</su-button>
   </div>
+
+  以下动画效果未对圆角按钮进行适配
+
+  <div>
+    <su-button animation="dashed-scroll">dashed-scroll</su-button>
+  </div>
+  <div>
+    <su-button animation="to-dashed-scroll">to-dashed-scroll</su-button>
+  </div>
+  <div>
+    <su-button animation="surround">
+      <div>surround</div>
+    </su-button>
+  </div>
 </div>
 
 
@@ -253,6 +267,17 @@
 </div>
 <div>
   <su-button animation="expend-tend-left">expend-tend-left</su-button>
+</div>
+<div>
+  <su-button animation="dashed-scroll">dashed-scroll</su-button>
+</div>
+<div>
+  <su-button animation="to-dashed-scroll">to-dashed-scroll</su-button>
+</div>
+<div>
+  <su-button animation="surround">
+    <div>surround</div>
+  </su-button>
 </div>
 ```
 :::

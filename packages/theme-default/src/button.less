@@ -130,13 +130,13 @@
           top: 0;
           left: 0;
           width: 0;
-          height: 100%;
+          height: 120%;
           background: @typeColor;
         }
         &:hover{
           color: #fff;
           &::before{
-            width: 100%;
+            width: 120%;
           }
         }
       }
@@ -152,13 +152,13 @@
           //left: 0;
           right: 0;
           width: 0;
-          height: 100%;
+          height: 120%;
           background: @typeColor;
         }
         &:hover{
           color: #fff;
           &::after{
-            width: 100%;
+            width: 120%;
           }
         }
       }
@@ -173,14 +173,14 @@
           top: 0;
           //left: 0;
           right: 0;
-          width: 100%;
+          width: 120%;
           height: 0;
           background: @typeColor;
         }
         &:hover{
           color: #fff;
           &::before{
-            height: 100%;
+            height: 120%;
           }
         }
       }
@@ -195,14 +195,14 @@
           bottom: 0;
           //left: 0;
           right: 0;
-          width: 100%;
+          width: 120%;
           height: 0;
           background: @typeColor;
         }
         &:hover{
           color: #fff;
           &::before{
-            height: 100%;
+            height: 120%;
           }
         }
       }
@@ -214,8 +214,8 @@
           transition: 0.5s;
           content: "";
           position: absolute;
-          width: 100%;
-          height: 0;
+          width: 120%;
+          height: 0px;
           z-index: -1;
           left: 50%;
           top: 50%;
@@ -225,7 +225,7 @@
         &:hover{
           color: #fff;
           &::after{
-            height: 100%;
+            height: 120%;
           }
         }
       }
@@ -237,8 +237,8 @@
           transition: 0.5s;
           content: "";
           position: absolute;
-          width: 0;
-          height: 100%;
+          width: 0px;
+          height: 120%;
           z-index: -1;
           left: 50%;
           top: 50%;
@@ -248,7 +248,7 @@
         &:hover{
           color: #fff;
           &::after{
-            width: 100%;
+            width: 120%;
           }
         }
       }
@@ -297,6 +297,75 @@
             width: 100%;
           }
         }
+      }
+      &-dashed-scroll{
+        border:none;
+        background: 
+          linear-gradient(90deg, @typeColor 50%, transparent 0) repeat-x,
+          linear-gradient(90deg, @typeColor 50%, transparent 0) repeat-x,
+          linear-gradient(0deg, @typeColor 50%, transparent 0) repeat-y,
+          linear-gradient(0deg, @typeColor 50%, transparent 0) repeat-y;
+        background-size: 6px 1px, 6px 1px, 1px 6px, 1px 6px;
+        background-position: 0 0, 0 100%, 0 0, 100% 0;
+        &:hover{
+          animation: dashedScrollAnimat .3s infinite linear;
+        }
+      }
+      &-to-dashed-scroll{
+        border: none;
+        outline: 1px solid @typeColor;
+        outline-offset: -1px;
+        &:hover{
+          outline: none;
+          background: 
+            linear-gradient(90deg, @typeColor 50%, transparent 0) repeat-x,
+            linear-gradient(90deg, @typeColor 50%, transparent 0) repeat-x,
+            linear-gradient(0deg, @typeColor 50%, transparent 0) repeat-y,
+            linear-gradient(0deg, @typeColor 50%, transparent 0) repeat-y;
+          background-size: 6px 1px, 6px 1px, 1px 6px, 1px 6px;
+          background-position: 0 0, 0 100%, 0 0, 100% 0;
+          animation: dashedScrollAnimat .3s infinite linear;
+        }
+      }
+      &-surround{
+        position: relative;
+        border: none;
+        &::before,&::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 2px solid @typeColor;
+          //border-radius: 30px;
+        }
+        &::before{
+          animation: surroundAnimat 3s infinite linear;
+        }
+        &::after{
+          animation: surroundAnimat 3s infinite -1.5s linear;
+        }
+      }
+    }
+    @keyframes dashedScrollAnimat {
+      100% {
+        background-position: 6px 0, -6px 100%, 0 -6px, 100% 6px;
+      }
+    }
+    @keyframes surroundAnimat {
+      0%,
+      100% {
+        clip-path: inset(0 0 95% 0);
+      }
+      25% {
+        clip-path: inset(0 95% 0 0);
+      }
+      50% {
+        clip-path: inset(95% 0 0 0);
+      }
+      75% {
+        clip-path: inset(0 0 0 95%);
       }
     }
     &-round{

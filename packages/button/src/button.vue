@@ -41,7 +41,10 @@
 </script>
  
 
-// <style lang="less" scoped>
+<style lang="less" scoped>
+
+
+
 // //@import url('../../style/index.less');
 // @typeList:primary,error,warning,success,default,info;
 // @typeColorList:#707AE4,#ed4014,#ff9900,#19be6b,#2d8cf0,#2db7f5;

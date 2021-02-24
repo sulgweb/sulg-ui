@@ -1,7 +1,9 @@
 <template>
     <div :class="[
-      'su-button',round?'su-button-round':'',
+      'su-button',
+      round?'su-button-round':'',
       type?'su-button-'+type:'',
+      shadow&&type?'su-button-'+type+'-shadow':'',
       animation&&type?'su-button-'+type+'-'+animation:'',
       bgColor&&type?'su-button-'+type+'-bg':''
     ]" @click="$emit('click')">
@@ -35,6 +37,10 @@
         icon:{
           type: String,
           default: ''
+        },
+        shadow:{
+          type: Boolean,
+          default:false
         }
       }
     }
@@ -42,8 +48,14 @@
  
 
 <style lang="less" scoped>
-
-
+/* @primaryColor:#707AE4;
+.su-button{
+  &-primary{
+    &-shadow{
+      box-shadow: 0 0 5px @primaryColor;
+    }
+  }
+} */
 
 // //@import url('../../style/index.less');
 // @typeList:primary,error,warning,success,default,info;

@@ -109,6 +109,53 @@
 :::
 
 
+### 阴影
+<div class="demo-block">
+  <div>
+    <su-button type="primary" round shadow>primary</su-button>
+  </div>
+  <div>
+    <su-button type="error" round shadow>error</su-button>
+  </div>
+  <div>
+    <su-button type="warning" round shadow>warning</su-button>
+  </div>
+  <div>
+    <su-button type="success" round shadow>success</su-button>
+  </div>
+  <div>
+    <su-button type="default" round shadow>default</su-button>
+  </div>
+  <div>
+    <su-button type="info" round shadow>info</su-button>
+  </div>
+</div>
+
+
+::: demo
+```html
+<div>
+  <su-button type="primary" round shadow>primary</su-button>
+</div>
+<div>
+  <su-button type="error" round shadow>error</su-button>
+</div>
+<div>
+  <su-button type="warning" round shadow>warning</su-button>
+</div>
+<div>
+  <su-button type="success" round shadow>success</su-button>
+</div>
+<div>
+  <su-button type="default" round shadow>default</su-button>
+</div>
+<div>
+  <su-button type="info" round shadow>info</su-button>
+</div>
+```
+:::
+
+
 ### 背景色按钮
 <div class="demo-block">
   <div>

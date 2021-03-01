@@ -157,6 +157,11 @@
               "name": "copy",
               "path": "/copy"
             },
+            {
+              "desc": "图片自适应",
+              "name": "imgFit",
+              "path": "/imgFit"
+            },
           ]
         }
       }

@@ -28,9 +28,9 @@
 
 <ul class="icon-list">
   <li v-for="item in icons" :key="item.font_class">
-    <span>
+    <span class="click" v-su-copy="{id:'copyTest1',value:`<su-icon name='${item.font_class}'></su-icon>`}">
       <su-icon :name="item.font_class"></su-icon>
-      {{item.font_class}}
+      <div>{{item.font_class}}</div>
     </span>
   </li>
 </ul>
@@ -47,6 +47,9 @@
   }
 </script>
 <style lang="less">
+  .click{
+    cursor:pointer
+  }
   .demo-icon .source > i {
     font-size: 24px;
     color: #8492a6;

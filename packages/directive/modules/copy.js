@@ -2,16 +2,27 @@
  * @description: 
  * @author: 小羽
  * @Date: 2021-02-09 14:10:43
- * @LastEditTime: 2021-02-09 17:58:07
+ * @LastEditTime: 2021-03-03 15:50:13
  * @Copyright: 1.0.0
  */
 export default{
   suCopy:{
     inserted(el,building){
-      let {func=()=>{alert("copy succeed")},id,event="click",type="input"} = building.value
+      let {func=()=>{/* alert("copy succeed") */},id,event="click",type="input",value=""} = building.value
       el.addEventListener(event,()=>{
-        document.getElementById(id).select()
+        let copyInput = document.createElement("input")
+        let inputId = id+"_copyInput"
+        if(value){
+          copyInput.value = value
+        }else{
+          copyInput.value = document.getElementById(id).value||document.getElementById(id).innerHTML
+        }
+        copyInput.setAttribute("id",inputId)
+        copyInput.setAttribute("style","position:absolute;width:100px;height:100px;top:-100px;left:-100px;z-index:-999")
+        document.body.append(copyInput)
+        document.getElementById(inputId).select()
         document.execCommand("Copy");
+        document.body.removeChild(copyInput)
         func()
         /* var clearSlct= "getSelection" in window ? function(){
           window.getSelection().removeAllRanges();

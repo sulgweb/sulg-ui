@@ -2,7 +2,7 @@
  * @description: 
  * @author: 小羽
  * @Date: 2021-02-09 11:17:47
- * @LastEditTime: 2021-02-09 18:19:09
+ * @LastEditTime: 2021-03-03 14:37:44
  * @Copyright: 1.0.0
 -->
 
@@ -28,6 +28,11 @@
     <su-input id="copyTest" v-model="value"/>
   </div >
   <su-button v-su-copy="{id:'copyTest'}">复制</su-button>
+
+  <div style="margin-bottom:16px" id="copyTest1">
+    12345678
+  </div >
+  <su-button v-su-copy="{id:'copyTest1'}">复制</su-button>
 </div>
 
 
@@ -40,6 +45,13 @@
       <su-input id="copyTest" v-model="value"/>
     </div >
     <su-button v-su-copy="{id:'copyTest'}">复制</su-button>
+  </div>
+
+  <div class="demo-block">
+    <div style="margin-bottom:16px" id="copyTest1">
+      12345678
+    </div >
+    <su-button v-su-copy="{id:'copyTest1'}">复制</su-button>
   </div>
 </template>
 

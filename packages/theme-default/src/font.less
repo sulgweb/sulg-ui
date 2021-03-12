@@ -1,0 +1,9 @@
+.loop(@counter) when (@counter > 0) {
+  .loop((@counter - 1));
+  text-shadow+: (1px * @counter) (1px * @counter) #a8a8a8;
+}
+.su-font-shadow{
+  overflow: hidden;
+  text-align: center;
+  .loop(5);
+}

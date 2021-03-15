@@ -162,6 +162,11 @@
               "name": "imgFit",
               "path": "/imgFit"
             },
+            {
+              "desc": "文字效果",
+              "name": "font",
+              "path": "/font"
+            },
           ]
         }
       }

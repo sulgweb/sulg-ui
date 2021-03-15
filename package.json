@@ -1,6 +1,6 @@
 {
   "name": "sulg-ui",
-  "version": "0.0.9",
+  "version": "0.0.8",
   "author": "xiaoyu <xiaoyu@sulg.top / 821760648@qq.com>",
   "main": "packages/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "vue-cli-service build",
     "gitlab-build": "vue-cli-service build --mode gitlab",
     "lint": "vue-cli-service lint",
-    "release": "npm version patch && npm publish"
+    "release": "npm version patch && git add . && git commit -m 'npm publish' && npm publish"
   },
   "dependencies": {
     "concurrently": "^6.0.0",

@@ -7,3 +7,18 @@
   text-align: center;
   .loop(5);
 }
+
+.su-typer-content{
+  &-cursor{
+    user-select: none;
+    animation: suCursorBlink 0.8s steps(1) infinite;
+  }
+}
+
+@keyframes suCursorBlink {
+  50% {
+    /* transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值。 */
+    /*border-color: transparent; /* #00000000 */
+    color:transparent;
+  }
+}

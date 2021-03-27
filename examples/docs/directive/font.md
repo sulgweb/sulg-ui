@@ -2,7 +2,7 @@
  * @description: 
  * @author: 小羽
  * @Date: 2021-03-12 14:31:24
- * @LastEditTime: 2021-03-18 00:23:23
+ * @LastEditTime: 2021-03-24 15:01:13
  * @Copyright: 1.0.0
 -->
 
@@ -77,6 +77,36 @@
   <div style="background:#000;height:100px;width:100%;font-size:60px;text-align:center;'">
     <div v-su-font="{color:'#707AE4',line:'2px',type:'hollowOut'}" style="font-weight:blod;">
       SULG UI
+    </div>
+  </div>
+</div>
+
+::: demo
+```html
+
+<template>
+  <div class="demo-block">
+    <div style="background:#000;height:100px;width:100%;font-size:60px;text-align:center;'">
+      <div v-su-font="{color:'#707AE4',line:'2px',type:'hollowOut'}" style="font-weight:blod;">
+        SULG UI
+      </div>
+    </div>
+  </div>
+</template>
+
+```
+:::
+
+
+
+### 打字机效果
+
+打字机效果。
+需要传入 `type:'hollowOut`,`color:'#707AE4'`,`line:'2px'`' (类型，颜色，边框大小)
+
+<div class="demo-block">
+  <div>
+    <div v-su-font="{value:'豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；',type:'typer'}" style="font-weight:blod;">
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
  * @description: 
  * @author: 小羽
  * @Date: 2021-02-10 10:28:33
- * @LastEditTime: 2021-04-11 11:20:21
+ * @LastEditTime: 2021-04-11 11:42:53
  * @Copyright: 1.0.0
 -->
 <style>
@@ -18,7 +18,7 @@
 只需要绑定行数即可，默认为1行。
 
 <div class="demo-block">
-  <div v-su-line-clamp="3">
+  <div v-su-line-clamp="1">
     SULG UI的核心想法是想教大家如何搭建一个基于Vue的组件库。市面上已经有很多成熟的中后台组件库，比如element-ui和iview。这个组件库也是由SULG团队维护开发，但不建议使用到生产环境，如果有兴趣，可以fork下来作为自己技术探索的一个部分。感谢大家的支持~
   </div>
 </div>
@@ -28,7 +28,7 @@
 
 <template>
   <div class="demo-block">
-    <div v-su-line-clamp="3">
+    <div v-su-line-clamp="1">
      SULG UI的核心想法是想教大家如何搭建一个基于Vue的组件库。市面上已经有很多成熟的中后台组件库，比如element-ui和iview。这个组件库也是由SULG团队维护开发，但不建议使用到生产环境，如果有兴趣，可以fork下来作为自己技术探索的一个部分。感谢大家的支持~
     </div>
   </div>

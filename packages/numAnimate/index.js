@@ -1,8 +1,8 @@
 /*
  * @description: 
  * @author: 小羽
- * @Date: 2021-01-20 11:14:48
- * @LastEditTime: 2021-01-20 11:21:24
+ * @Date: 2021-01-24 11:14:48
+ * @LastEditTime: 2021-01-24 11:21:24
  * @Copyright: 1.0.0
  */
 import SuNumAnimate from './src/numAnimate.vue'

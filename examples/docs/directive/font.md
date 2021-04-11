@@ -1,8 +1,8 @@
 <!--
  * @description: 
  * @author: 小羽
- * @Date: 2021-03-12 14:31:24
- * @LastEditTime: 2021-03-24 15:01:13
+ * @Date: 2021-03-14 14:31:24
+ * @LastEditTime: 2021-04-11 11:23:12
  * @Copyright: 1.0.0
 -->
 
@@ -106,7 +106,7 @@
 
 <div class="demo-block">
   <div>
-    <div v-su-font="{value:'豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；',type:'typer'}" style="font-weight:blod;">
+    <div v-su-font="{value:'SULG UI的核心想法是想教大家如何搭建一个基于Vue的组件库。市面上已经有很多成熟的中后台组件库，比如element-ui和iview。这个组件库也是由SULG团队维护开发，但不建议使用到生产环境，如果有兴趣，可以fork下来作为自己技术探索的一个部分。感谢大家的支持~',type:'typer'}">
     </div>
   </div>
 </div>
@@ -116,9 +116,8 @@
 
 <template>
   <div class="demo-block">
-    <div style="background:#000;height:100px;width:100%;font-size:60px;text-align:center;'">
-      <div v-su-font="{color:'#707AE4',line:'2px',type:'hollowOut'}" style="font-weight:blod;">
-        SULG UI
+    <div>
+      <div v-su-font="{value:'SULG UI的核心想法是想教大家如何搭建一个基于Vue的组件库。市面上已经有很多成熟的中后台组件库，比如element-ui和iview。这个组件库也是由SULG团队维护开发，但不建议使用到生产环境，如果有兴趣，可以fork下来作为自己技术探索的一个部分。感谢大家的支持~',type:'typer'}">
       </div>
     </div>
   </div>

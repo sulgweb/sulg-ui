@@ -2,13 +2,13 @@
  * @description: 
  * @author: 小羽
  * @Date: 2021-02-10 14:10:43
- * @LastEditTime: 2021-04-11 11:15:18
+ * @LastEditTime: 2021-04-11 11:38:37
  * @Copyright: 1.0.0
  */
 export default{
   suCopy:{
     inserted(el,building){
-      let {func=()=>{/* alert("copy succeed") */},id,event="click",type="input",value=""} = building.value
+      let {func=()=>{alert("copy succeed")},id,event="click",type="input",value=""} = building.value
       el.addEventListener(event,()=>{
         let copyInput = document.createElement("input")
         let inputId = id+"_copyInput"

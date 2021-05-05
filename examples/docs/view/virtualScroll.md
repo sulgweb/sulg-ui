@@ -18,7 +18,7 @@
     <div 
       v-for="item in virtualList"
       :key="item.id" 
-      :style="{ height: itemSize + 'px', lineHeight: itemSize + 'px' }">
+      :style="{ height: itemSize + 'px', lineHeight: itemSize + 'px', background:'#C5D9E8', color:'#fff',marginBottom:'5px'}">
         <span>{{item.value}}</span>
     </div>
   </su-virtual-scroll>
@@ -32,7 +32,7 @@
     <div 
       v-for="item in virtualList" 
       :key="item.id" 
-      :style="{ height: itemSize + 'px', lineHeight: itemSize + 'px' }">
+      ::style="{ height: itemSize + 'px', lineHeight: itemSize + 'px', background:'#C5D9E8', color:'#fff',marginBottom:'5px'}">
         <span>{{item.value}}</span>
     </div>
   </su-virtual-scroll>
@@ -128,12 +128,15 @@ export default {
   }
 </script>
 <style scoped>
-  .virtualList1{
+  ..virtualList1{
     display:flex;
     flex-wrap:wrap
   }
   .virtualList1-item{
-    width:50%
+    width:calc(50% - 10px);
+    background:#C5D9E8;
+    color:#fff;
+    margin:5px;
   }
 </style>
 ```
@@ -192,7 +195,10 @@ export default {
     flex-wrap:wrap
   }
   .virtualList1-item{
-    width:50%
+    width:calc(50% - 10px);
+    background:#C5D9E8;
+    color:#fff;
+    margin:5px;
   }
 </style>
 

@@ -128,7 +128,7 @@ export default {
   }
 </script>
 <style scoped>
-  ..virtualList1{
+  .virtualList1{
     display:flex;
     flex-wrap:wrap
   }
